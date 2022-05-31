@@ -2,7 +2,7 @@ Package: PALMO
 Type: Package
 Title: Identify Intra and Inter-Donor Variations in Bulk or Single Cell
         Longitudinal Dataset
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     c(person(given = "Suhas",
            family = "Vasaikar",
@@ -34,9 +34,9 @@ LazyData: false
 VignetteBuilder: knitr
 RoxygenNote: 7.1.2
 NeedsCompilation: no
-Packaged: 2022-05-11 16:21:00 UTC; suhas.vasaikar
+Packaged: 2022-05-31 23:38:18 UTC; suhas.vasaikar
 Author: Suhas Vasaikar [aut, cre],
   Aarthi Talla [aut, ctb],
   Xiaojun Li [aut, ctb]
 Repository: CRAN
-Date/Publication: 2022-05-13 08:40:06 UTC
+Date/Publication: 2022-06-01 00:10:02 UTC
