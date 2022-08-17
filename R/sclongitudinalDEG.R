@@ -79,6 +79,11 @@ sclongitudinalDEG <- function(data_object, scassay="RNA",
     sccounts <- scobj[[scassay]]@data
 
     ## fetch single cell meta data
+    barcode_col <- intersect(colnames(scobj@meta.data), "barcodes")
+    if(length(barcode_col)==1) {
+      scobj@meta.data$barcodes_old <- scobj@meta.data$barcodes
+      scobj@meta.data$barcodes <- NULL
+    }
     scmetadata <- scobj@meta.data %>%
         rownames_to_column(var = "barcodes")
     filtercolumn <- c("Sample", setdiff(colnames(scmetadata), colnames(ann)))
@@ -169,7 +174,8 @@ sclongitudinalDEG <- function(data_object, scassay="RNA",
 
           # make SCA object
           sca <- FromMatrix(exprsArray = as.matrix(sccounts_sub_ct),
-                              cData = cdat, fData = fdat)
+                              cData = cdat, fData = fdat,
+                              check_sanity = FALSE)
 
           # Fit hurdle model
           # add adjusting factor and CDR if provided

@@ -1,3 +1,6 @@
+## PALMO 0.1.2
+Bug in sclongitudinalDEG function fixed.
+
 ## PALMO 0.1.1
 Minor bugs fixed.
 

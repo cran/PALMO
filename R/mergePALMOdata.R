@@ -77,7 +77,6 @@ mergePALMOdata <- function(data_object, datatype) {
                 # in-case subset of samples only
                 data <- subset(x = data, subset = Sample %in% overlap)
 
-                # Aggregate data at celltypes (psuedo-bulk) For single cell
                 # data merge annotation and single cell metadata
                 metaData <- data@meta.data
                 anndata_temp <- anndata[metaData$Sample, ]
